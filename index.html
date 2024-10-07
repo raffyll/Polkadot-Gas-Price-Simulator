@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Preço de Gas - Polkadot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imgs/polkadot-new-dot-logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="heading">
+            
+        </div>
+    </header>
+    <div id="container">
+        <h1>Simulador de Preço de Gas - Polkadot</h1>
+        <h2>Contagem de Transações: <span id="contagem">0</span> </h2>
+        <h2>A cada 1 minuto todas as transações são limpas</h2>
+        <form id="gas-form">
+            <label for="valor-transacao">Valor da Transação</label>
+            <input type="number" id="valor-transacao" required>
+
+            <label for="complexidade">Complexidade da Transação</label>
+            <select id="complexidade" required>
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+
+            <label for="moeda">Moeda de Conversão</label>
+            <select id="moeda" required>
+                <option value="usd">USD - Dólar Americano</option>
+                <option value="eur">EUR - Euro</option>
+                <option value="brl">BRL - Real Brasileiro</option>
+            </select>
+
+            <button type="button" id="calcular">Calcular preço do Gas</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+    
+    <div id="historico">
+        <h3>Histórico de Transações</h3>    
+        <ul id="lista-historico"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
